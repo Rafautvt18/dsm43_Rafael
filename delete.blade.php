@@ -1,6 +1,6 @@
-<div class="modal fade" id="modal-delete-{{$usuario->id_usuario}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-delete-{{$tienda->id_tienda}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="{{route('usuarios.destroy', $usuario->id_usuario)}}" method="POST">
+        <form action="{{route('tiendas.destroy', $tienda->id_tienda)}}" method="POST">
             @csrf
             @method('DELETE')
             <div class="modal-content">
@@ -11,7 +11,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ¿Deseas eliminar al registro {{$usuario->nombre}}?
+                    ¿Deseas eliminar al registro {{$tienda->nombre}}?
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-outline-danger" value="Eliminar">
